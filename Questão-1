@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil Pessoal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #6959cd;
+            padding: 20px;
+        }
+        .perfil {
+            background-color:#ff4500;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="perfil">
+        <h1>Giovani Silva </h1>
+        <p>Curso: [Analise e desenvolvimento de sistemas]</p>
+        <p>Objetivo: [trabalhar e conseguir dinheiro ]</p>
+        <p>Matrícula: 202403470659</p>
+    </div>
+</body>
+</html>
