@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #b0e0e6; }
+        .form-container { background: #ffff00; padding: 20px; border-radius: 5px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+        input, textarea { width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; padding: 10px; background: #4CAF50; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .message { margin-top: 10px; color: #fff; padding: 8px; border-radius: 4px; }
+        .success { background-color: #d2691e; }
+        .error { background-color: #ff8C00; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2> Formulário Contato</h2>
+        <input type="text" id="name" placeholder="Nome">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" rows="4" placeholder="Mensagem"></textarea>
+        <button onclick="validateForm()">Enviar</button>
+        <div id="formMessage" class="message" style="display:none;"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const formMessage = document.getElementById('formMessage');
+
+            if (!name || !email || !message) {
+                formMessage.textContent = 'Por favor, preencha todos os campos.';
+                formMessage.className = 'message error';
+                formMessage.style.display = 'block';
+                return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                formMessage.textContent = 'Por favor, insira um email válido.';
+                formMessage.className = 'message error';
+                formMessage.style.display = 'block';
+                return;
+            }
+
+            formMessage.textContent = 'Mensagem enviada com sucesso!';
+            formMessage.className = 'message success';
+            formMessage.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
