@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela de Produtos</title>
+    <style>
+        /* Estilos da tabela */
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        /* Cabeçalho da tabela */
+        th {
+            background-color: #ff0000;
+            color: white;
+            padding: 8px;
+        }
+
+        /* Linhas da tabela */
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Efeito zebra nas linhas */
+        tr:nth-child(even) {
+            background-color: #7b68ee;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Tabela de Produtos</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>controle</td>
+            <td>R$ 10,00</td>
+            <td>Eletrônicos</td>
+            <td>Produto básico e eficiente.</td>
+        </tr>
+        <tr>
+            <td>calculadora </td>
+            <td>R$ 25,00</td>
+            <td>Escritório</td>
+            <td>Útil para o dia a dia no escritório.</td>
+        </tr>
+        <tr>
+            <td>copo do rock rio</td>
+            <td>R$ 55,00</td>
+            <td>Domésticos</td>
+            <td>Alta durabilidade e qualidade.</td>
+        </tr>
+    </table>
+
+</body>
+</html>
